@@ -6,6 +6,9 @@ const myConnection = require('express-myconnection');
 
 const app = express();
 
+//importing routes
+const customerRoutes = require('./routes/customer');
+
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
@@ -21,7 +24,13 @@ app.use(myConnection( mysql, {
     database: 'crudmysql'
 }, 'single'));
 
+//routes
+app.use('/', customerRoutes);
 
+//static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+// starting the server
 app.listen(app.get('port'), () => {
     console.log('Server  on port 3000')
 });
