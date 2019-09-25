@@ -17,11 +17,11 @@ app.set('views', path.join(__dirname, 'views'));
 //midlewares
 app.use(morgan('dev'));
 app.use(myConnection( mysql, {
-    host: 'localhost',
-    user: 'root',
-    password: 'holamysql',
+    host: 'bw8nb25yudpavqsfgiie-mysql.services.clever-cloud.com',
+    user: 'uqtuppmsdtr40bu5',
+    password: 'XJPllJhzdhQcHMVa5jD0',
     port: 3306,
-    database: 'crudmysql'
+    database: 'bw8nb25yudpavqsfgiie'
 }, 'single'));
 app.use(express.urlencoded({extended:false}));
 

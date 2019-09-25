@@ -1,8 +1,8 @@
 --creating the database
-CREATE DATABASE crudmysql;
+CREATE DATABASE bw8nb25yudpavqsfgiie;
 
 --using the database
-use crudmysql;
+use bw8nb25yudpavqsfgiie;
 
 --creating a table
 create table customer (
